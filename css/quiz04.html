@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+	<style type="text/css">
+	* { box-sizing: border-box; }
+	#wrap{
+		display: flex; flex-flow: column;
+		width: 100%; height: 100%; margin: 0 auto;
+		border: 4px solid black; text-align: center;
+	}
+	div { width: 33.333%; }
+	.left {  background-color: green;  width: 70% ; height: 400px;
+	flex-flow:row; padding: 20px 0 0 0; }
+	.center {  background-color: green; display:flex; flex-flow:row; width: 100%; }
+	.right {  background-color: skyblue; width: 100% ; height: 400px; overflow:auto;}
+	.a { border: 3px solid black; background-color: skyblue; width: 80%; height: 10%; margin: 10px auto ; }
+	.b { border: 3px solid black; background-color: yellow; width: 80%; height: 10%; margin: 10px auto; }
+	.c { border: 3px solid black; background-color: pink; width: 80%; height: 10%; margin: 10px auto; }
+	header{ background-color: red; height: 100px; }
+	footer { height: 20px; background-color: pink; height: 100px; }
+	nav { background-color: yellow; height: 80px; }
+	</style>
+</head>
+<body>
+	<div id="wrap">
+		<header> 머리 </header>
+		<nav> 네비게이션 </nav>
+		<div class="center"> 
+			<div class="left">메뉴 
+				<div class="a">끼양</div>
+				<div class="b">끼양</div>
+				<div class="c">끼양</div>
+				</div>
+			<div class="right">헤헤</div>
+		</div>
+		<footer> 다리 </footer>
+	</div>
+
+</body>
+</html>

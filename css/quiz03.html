@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+	<style type="text/css">
+	* { box-sizing: border-box; }
+	#wrap{
+		display: flex; ;
+		width: 100%; height: 100%; margin: 0 auto;
+		border: 4px silid black; text-align: center;
+	}
+	div { width: 33.333%; }
+	.left { order: 1; background-color: yellow; border: 3px solid black; width: 100px; height: 400px; padding: 20px 0 0 0; }
+	.center { order: 2; background-color: green; border: 3px solid black; width: 800px; padding: 20px 0 0 0; }
+	.right { order: 3; background-color: yellow;  border: 3px solid black; width: 100% ; padding: 20px 0 0 0; }
+	.a { border: 3px solid black; background-color: skyblue; width: 80%; height: 10%; margin: 200px auto 10px auto; }
+	.b { border: 3px solid black; background-color: yellow; width: 80%; height: 10%; margin: 10px auto; }
+	.c { border: 3px solid black; background-color: pink; width: 80%; height: 10%; margin: 10px auto; }
+	header{ border: 3px solid black; background-color: red; height: 100px; }
+	footer { height: 20px; border: 3px solid black; background-color: pink; height: 100px; }
+	</style>
+</head>
+<body>
+	<header>머리</header>
+	<div id="wrap">
+		<div class="left">1</div>
+		<div class="center">2
+		<div class="a">끼양</div>
+		<div class="b">끼양</div>
+		<div class="c">끼양</div>
+		</div>
+		<div class="right">3</div>
+	</div>
+	<footer> 다리</footer>
+</body>
+</html>
