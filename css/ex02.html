@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>뿌뿌~</title>
+<style type="text/css">
+	#wrap { margin: 0 auto; width:70%; background-color: green;}
+	div { background-color: pink;}
+	h2:frist-letter{
+	font-size: 30px; color:red; text-transform: uppercase;
+	}
+	h3:first-line{color: blue;}
+	
+	input:focus{background-color: red;}
+	input:checked+b.d1{ background-color: gray; }
+	input:checked+b.d2{ background-color: black; }
+	.section .swrite:focus {background-color: red;}
+	b { color:white; background-color: white;}
+</style>
+</head>
+<body>
+	<div id="wrap">
+	<h2> test css</h2>
+	<h3>문제) 대한민국의 수도는?</h3>
+	<p>정답 작성 : <input type="text"></p>
+	<h2>answer</h2>
+	힌트 보기 : <input type="checkbox">
+	<b class="d1">남대문이 있는 곳</b>
+	정답 보기 : <input type="checkbox">
+	<b class="d2">서울</b>
+	<section class="section">
+	클래스 : <input class="swrite" type="text">
+	</section>
+	</div>
+</body>
+</html>
