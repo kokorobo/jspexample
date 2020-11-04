@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+	<style type="text/css">
+	div{  background-color: pink;}
+	</style>
+	<script type="text/javascript">
+		page = 1;
+		
+		function back(){
+			page --;
+			if(page == 0){
+				page = 8;
+			}
+			document.getElementById('view1').src="resources/images/최근상품0"+page+".jpg"
+			}
+			
+		function next(){
+			page ++;
+			if(page == 9){
+				page = 1;
+			}
+			document.getElementById('view1').src="resources/images/최근상품0"+page+".jpg"
+		}
+		
+		
+		
+	</script>
+</head>
+<body>
+	<img id="view1" align="middle" src="resources/images/최근상품01.jpg" width="500px" height="500px">
+	<br>
+	<div align="center">
+	<input type="button" onclick="back()" value="이전페이지">
+	<input type="button" onclick="next()" value="다음페이지">
+	
+	
+</body>
+</html>

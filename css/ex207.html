@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+	<script type="text/javascript">
+		function init(){
+			alert('초기화 진행')
+		}
+	</script>
+	<style type="text/css">
+		div{ background-color: #d94a38; width: 120px; height: 50px; }
+	</style>
+	<script type="text/javascript">
+		function mOver(obj){ obj.innerHTML = "ty" }
+		function mOut(obj){ obj.innerHTML = "쥐 잡자" }
+	</script>
+</head>
+<body onload="init()">
+	<div onmouseover="mOver(this)" onmouseout="mOut(this)">
+		ㅎㅎㅎㅎ
+	</div>
+	<h1 onmouseover="style.color='red'" onmouseout="style.color='black'">
+	ㅎㅎㅎㅎㅎㅎ
+	</h1>
+
+</body>
+</html>

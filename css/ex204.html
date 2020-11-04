@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+	<script type="text/javascript">
+		function display(){
+			n = document.getElementById('name').value
+			document.getElementById('name').value = ''
+			document.getElementById('name2').value = n
+			
+
+			document.getElementById('n01').innerHTML = n
+			document.getElementById('n02').innerHTML = n
+			document.getElementById('myImage').src="resources/images/test2.jpg"
+			
+		}
+	</script>
+</head>
+<body>
+	<img id="myImage" src="resources/images/car01.png" width="150px" height="150px">
+	<h1 id='n01'>테수투깝</h1>
+	<label id='n02'>라베깝</label>
+<hr>
+	<input type="text" id='name'><br>
+	<input type="text" id='name2'><br>
+	<input type="button" onclick="display()" value="click">
+</body>
+</html>

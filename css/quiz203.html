@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+	<script type="text/javascript">
+		page = 1;
+		var e;
+		function back(){
+			page --;
+			if(page == 0){
+				page = 8;
+			}
+			document.getElementById('view1').src="resources/images/최근상품0"+page+".jpg"
+			}
+		
+		function next(){
+			page ++;
+			if(page == 9){
+				page = 1;
+			}
+			document.getElementById('view1').src="resources/images/최근상품0"+page+".jpg"
+		}
+		function view(){
+			 going()
+			 e = setTimeout('view()', 1000)
+			 
+		}
+		function stop(){
+			clearTimeout(e);
+			}
+		function going(){
+			next()
+		}
+	</script>
+	<style type="text/css">
+	div { border: 2 solid black; display: flex; flex-flow: row; align-content: center; width: 500px; height: 500px;
+	 margin: auto ; align-items: center; width: 600px; height: 700px }
+	.main {width: 500px; height: 500px}
+	</style>
+</head>
+<body onload="view()">
+	<div>
+		<img src = resources/images/왼쪽화살표.jpg width="50px" height="50px" align="middle" onclick="back();">
+		<div onmouseover="stop()" onmouseout="view()"><img id="view1" class='main' src = "resources/images/최근상품01.jpg" ></div>
+		<img src = resources/images/오른쪽화살표.jpg width="50px" height="50px" align="middle" onclick="next();">
+	</div>
+
+</body>
+</html>
