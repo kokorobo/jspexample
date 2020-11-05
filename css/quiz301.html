@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+	<style type="text/css">
+		div {display: flex; }
+		.intable { border: 1 solid black;  margin: 0 auto;}
+		#checklist { display: flex; flex-flow:column; }
+		td { width: 150px; height: 150px;}
+		/*table td p {background-color: red; width: 150px; height: 50px;}*/
+	</style>
+	<script type="text/javascript">
+		var arr = [];
+		var check = 0;
+			function add(x){
+				list = document.getElementById('list')
+				here = document.getElementById('here')
+				here.style.backgroundColor = "green"
+				list.innerHTML = "최근 본 목록"
+			console.log(x)
+			//num = 'buylist' + x
+			//console.log(num)
+			//chk = document.getElementById(num)
+			sty = document.createElement('img')
+			sty.setAttribute('width',150)
+			sty.setAttribute('height',150)
+			sty.setAttribute('src','resources/images/최근상품0'+x+'.jpg')
+			var z= 0;
+			arr[z+4] = arr[z+3]
+			arr[z+3] = arr[z+2]
+			arr[z+2] = arr[z+1]
+			arr[z+1] = arr[z]
+			arr[z] = sty
+			
+			console.log(arr)
+			
+			//document.getElementById('checklist').removeChild(arr[])
+			if(check >= 5){
+				document.getElementById('checklist').innerHTML = ""
+				for(b = 0 ; b < arr.length; b++){
+					document.getElementById('checklist').appendChild(arr[b])
+				}
+			
+			}else{
+				document.getElementById('checklist').appendChild(arr[0])
+				check ++
+			}
+			
+			}
+	
+	</script>
+	
+</head>
+<body>
+	<div>
+		<table border="1 solid black" class="intable">
+			<td><a href="#" onclick="add(1)" ><img src="resources/images/최근상품01.jpg" width="150px" height="150px" id="buylist1"></a></td>
+			<td><a href="#" onclick="add(2)" ><img src="resources/images/최근상품02.jpg" width="150px" height="150px" id="buylist2"></a></td>
+			<td><a href="#" onclick="add(3)" ><img src="resources/images/최근상품03.jpg" width="150px" height="150px" id="buylist3"></a></td>
+			<td><a href="#" onclick="add(4)" ><img src="resources/images/최근상품04.jpg" width="150px" height="150px" id="buylist4"></a></td>
+			<tr>
+			<td><a href="#" onclick="add(5)" ><img src="resources/images/최근상품05.jpg" width="150px" height="150px" id="buylist5"></a></td>
+			<td><a href="#" onclick="add(6)" ><img src="resources/images/최근상품06.jpg" width="150px" height="150px" id="buylist6"></a></td>
+			<td><a href="#" onclick="add(7)" ><img src="resources/images/최근상품07.jpg" width="150px" height="150px" id="buylist7"></a></td>
+			<td><a href="#" onclick="add(8)" ><img src="resources/images/최근상품08.jpg" width="150px" height="150px" id="buylist8"></a></td>
+		</table>
+		<table style="display: flex; flex-flow: column; margin: 0;">
+			 <td style="background-color: red; width: 150px; height: 50px; margin: 0;" id="here"><p id="list" >
+			 	목록이 없습니다</p></td>
+			 <tr style="margin: 0" id="checklist">
+			 	 </table>
+	</div>
+</body>
+</html>
