@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+	<style>
+	#remove{display: none;}
+	#remove.a{ display: block;}
+	</style>
+	<script type="text/javascript">
+	var e
+	function init(){
+		t1 = document.getElementById('target1')
+		t2 = document.getElementById('target2')
+		t3 = document.getElementById('target3')
+		t4 = document.getElementById('target4')
+		t5 = document.getElementById('target5')
+		t1.addEventListener('click',btn_listener)
+		t2.addEventListener('click',btn_listener)
+		t3.addEventListener('click',btn_listener)
+		t4.addEventListener('click',btn_listener)
+		t5.addEventListener('click',btn_listener)
+	}
+	function btn_listener(event){
+		switch(event.target.id){
+		case 'target1':{
+			clearTimeout(e);
+			let remove = document.getElementById('remove')
+			remove.setAttribute('class','a')
+			remove.style.backgroundColor ='red'
+			break;
+		}
+		
+		case 'target2':{
+			clearTimeout(e);
+			let remove = document.getElementById('remove')
+			remove.setAttribute('class','a')
+			remove.style.backgroundColor ='green'
+			break;
+		}
+		case 'target3':{
+			clearTimeout(e);
+			let remove = document.getElementById('remove')
+			remove.setAttribute('class','a')
+			remove.style.backgroundColor ='blue'
+			;break;
+		}
+		case 'target4':{
+			auto();
+			break;
+		}
+		case 'target5':{
+			let remove = document.getElementById('remove')
+			remove.removeAttribute('class')
+			clearTimeout(e);
+			break;
+		}
+		}
+		}
+	
+	function auto(){
+		let remove = document.getElementById('remove')
+		remove.setAttribute('class','a')
+		remove.style.backgroundColor ='yellow'
+		setTimeout("remove.removeAttribute('class')",10)
+		e = setTimeout('auto()', 8)
+	}
+	
+	
+	</script>
+</head>
+<body onload="init()">
+	<input type="button" value="버튼1" id="target1">
+	<input type="button" value="버튼2" id="target2">
+	<input type="button" value="버튼3" id="target3">
+	<input type="button" value="오토" id="target4">
+	<input type="button" value="지움" id="target5">
+	
+	<div id="remove" style="width: 500px; height: 500px; margin: auto">
+		<h3 style="margin: auto; padding: auto; align-content: center;">니하오</h3>
+	</div>
+</body>
+</html>

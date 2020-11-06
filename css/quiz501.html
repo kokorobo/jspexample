@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+	<script src="jquery-3.5.1.min.js"></script>
+	<script src="jquery-1.12.1-ui.js"></script>
+	<script type="text/javascript">
+	var on = 16;
+	$ (function(){
+		$("#d").draggable()
+		$("#pl").click(function(){
+			$("#on").text(++on)
+			$("h1").css({ "font-size":+on+30+"px"})
+			$("p").css({ "font-size":+on+"px"})
+		})
+		$("#mi").click(function(){
+			$("#on").text(--on)
+			$("h1").css({ "font-size":+on+30+"px"})
+			$("p").css({ "font-size":+on+"px"})
+		})
+	})
+	
+	</script>
+	<style type="text/css">
+	.drag{ width: 200px; height: 150px;
+	 	border-style: solid; text-align: center; }
+	.css_here2{ height: 430px; text-align: center; }
+	.css_here2 h1{ font-size: 46px;} 
+	.css_here2 p{ font-size: 16px;} 
+	</style>
+</head>
+<body>
+	<div id="d" class="drag">
+		<div style="display: flex; flex-flow: column; ">
+				<div style="background-color: red; height: 30px">리모콘<br></div>
+				<div style="display: flex; flex-flow: row; margin: 25px auto;" >
+					<img id="pl" src="resources/images/add.png" style=" height: 30px; width: 30px;" >
+					<div id="on" style="background-color: yellow;  width: 50px; ">16</div>
+					<img id="mi" src="resources/images/sub.jpg" style="height: 30px; width: 30px;" >
+				</div>
+		</div>
+	</div>
+	<div id="here" class="here2">
+	<h1 style="font-size: 46px;">오늘의 소설 </h1>
+	<p style="font-size: 16px">
+	오늘도 덥다<br>
+	내일도 덥다<br>
+	모래는 바다<br>
+	</p>
+	</div>
+</body>
+</html>
