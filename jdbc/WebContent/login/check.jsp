@@ -32,6 +32,7 @@
 	if(request.getParameter("pw").equals(chkpw)){
 		
 		session.setAttribute("id", id2);
+		
 		String heer= name2+"님 어서와";
 		%> <script type="text/javascript"> alert("<%= name2 %>"+"어서와");
 		location.href="quiz101.jsp";

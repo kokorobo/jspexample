@@ -13,14 +13,15 @@
 <body>
 <h1>회원 정보 수정 및 삭제</h1>
 	<%
-	out.print(session.getAttribute("id"));
+	String id3 = (String)session.getAttribute("id");
+	out.print(id3);
 	Class.forName("oracle.jdbc.driver.OracleDriver");
 	String url = "jdbc:oracle:thin:@192.168.0.46:1521:xe";
 	String id = "java" ,pwd ="1234";
 	Connection con = DriverManager.getConnection(url, id, pwd);
 	String sql = "select * from student where stunum = ?";
 	PreparedStatement ps = con.prepareStatement(sql);
-	ps.setString(1, id);
+	ps.setString(1, id3);
 	ResultSet rs = ps.executeQuery();
 	String chkpw = null;
 	String id2 = null;
@@ -41,7 +42,8 @@
 	<input type="text" name="name" value="<%=name2%>"><br>
 	<input type="text" name="add" value="<%=add2%>"><br>
 	<input type="text" name="tel" value="<%=tel2%>"><br>
-	<input type="submit" value="회원가입">
+	<input type="submit" value="수정">
+	<input type="button" onclick='location.href="showinfo.jsp"' value='취소'>
 	</form>
 
 </body>

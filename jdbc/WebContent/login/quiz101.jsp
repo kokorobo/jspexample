@@ -14,6 +14,7 @@
 	table th{ border: 1px solid black;}
 	table td{ border: 1px solid black;}
 	</style>
+	
 </head>
 <body>
 	<%
@@ -44,10 +45,8 @@
 		}
 	%>
 </table>
-<script type="text/javascript">function clear(){
-	<% session.invalidate(); %>
-}</script>
-<input type="button" onclick='location.href="login.jsp", clear()' value="로그아웃"> 
+
+<input type="button" onclick='location.href="login.jsp"' value="로그아웃"> 
 <input type="button" onclick='location.href="showinfo.jsp"' value="회원정보">
 
 
