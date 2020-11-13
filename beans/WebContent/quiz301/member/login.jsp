@@ -19,6 +19,7 @@
 		<td rowspan="2"><input type="submit" value="로그인" style="width: 60px; height: 50px;"></td></tr>
 		<tr><td><input type="text" name="pwd"></td>
 		</tr>
+		<tr><td><a href="regaster.jsp">회원가입</a></td></tr>
 		</table>
 	</form>
 	</td></tr>

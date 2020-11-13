@@ -19,17 +19,14 @@
 	<h1 style="text-align: center; margin: 20 auto">회원 목록</h1>
 	<table class="login">
 	<tr><th>이름</th><th>주소</th><th>전화번호</th></tr>
-	<%
+	<%	
 		ArrayList<MemberDTO> list = dao.memberList();
 		for(MemberDTO d : list){%>
 			<tr><td>
-			<jsp:forward page="userInfo.jsp">
-			<jsp:param value="<%=d.getName() %>" name="name"/>
-			</jsp:forward>
-			<%=d.getName() %></td>
+			<a href="userInfo.jsp?key=<%=d.getName()%>"><%=d.getName()%></a></td>
 			<td><%=d.getAdd() %></td>
 			<td><%=d.getTel() %></td></tr>
-		<% } %>
+		<% }  %>
 		
 	</table>
 	<footer><%@ include file = "../default/footer.jsp" %></footer>

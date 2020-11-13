@@ -8,7 +8,7 @@
 </head>
 <body>
 	<header><%@include file = "../default/header.jsp" %></header>
-	<main><%@include file = "../default/main.jsp" %></main>
+	<main><%@include file="../default/main.jsp" %></main>
 	<footer><%@include file = "../default/footer.jsp" %></footer>
 </body>
 </html>
